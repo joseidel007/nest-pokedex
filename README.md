@@ -25,6 +25,16 @@ npm run start:dev
 8. Reconstruir la base de datos con la semilla
 ```http://localhost:3000/api/v2/seed```
 
+
+#Production Build
+1. Crear archivo ```.env.prod```
+2. Llenar las variables de entorno de Prod
+3. Crear la nueva imagen
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build -d
+
+```
+
 ##  Stack usado
 * MongoDB
 * Nest
